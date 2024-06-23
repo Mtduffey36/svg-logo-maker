@@ -20,7 +20,7 @@
   ## Video Guide
   [SVG Generator](https://youtu.be/lPfubuPQzHc)
 
-  <video src="./examples/2024-06-23 13-27-41.mp4" width="320" height="240" controls></video>
+  <iframe width="560" height="315" src="https://youtu.be/lPfubuPQzHc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
   ## Contributing 
   No
