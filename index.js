@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-// const { Square, Triangle, Circle } = require('./lib/shapes');
+const generateSvg = require('./lib/shapes.js')
 
 
 const questions = [
@@ -23,6 +23,12 @@ const questions = [
     }
 ];
 
-inquirer.prompt(questions).then((answers) => {
-    console.log('Answers Here', answers)
-});
+function init() {
+    inquirer.prompt(questions).then((data) => {
+        const submission = generateSvg(data)
+        fs.writeFile('logo.svg', submission, (err) => 
+        err ? console.log(err) : console.log('Logo Generated'))
+        console.log('TEST HERE INIT', submission);
+    })
+};
+init();
