@@ -25,11 +25,11 @@ const questions = [
 
 function init() {
     inquirer.prompt(questions).then((data) => {
+
         const submission = generateSvg(data)
-        console.log('Test in', submission);
+
         fs.writeFile('logo.svg', submission, (err) => 
-        err ? console.log(err) : console.log('Logo Generated'))
-        console.log('TEST HERE', submission);
+            err ? console.log(err) : console.log('Logo Generated'))
     })
 };
 init();
