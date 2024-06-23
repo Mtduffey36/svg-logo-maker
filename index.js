@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const { Square, Triangle, Circle } = require('./lib/shapes');
+// const { Square, Triangle, Circle } = require('./lib/shapes');
 
 
 const questions = [
@@ -25,4 +25,4 @@ const questions = [
 
 inquirer.prompt(questions).then((answers) => {
     console.log('Answers Here', answers)
-})
+});
