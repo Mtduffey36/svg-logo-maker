@@ -1,6 +1,5 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-
 const { Square, Triangle, Circle } = require('./lib/shapes');
 
 
@@ -8,10 +7,7 @@ const questions = [
     {
         type: 'input',
         name: 'initials',
-        message:'Please enter a 3 letter initial.',
-        // validate: (input) =>
-            // TODO: Finish validation
-        //     (input.length > 3) ? console.log('Please enter characters in 3 or less!') : 
+        message:'Please enter a 3 letter initial.'
     },
     {
         type: 'list',
@@ -27,10 +23,6 @@ const questions = [
     }
 ];
 
-const init = () => {
-    inquirer.prompt(questions).then((response) => {
-        writeToFile('log.txt')
-    });
-}
-init();
-
+inquirer.prompt(questions).then((answers) => {
+    console.log('Answers Here', answers)
+})
